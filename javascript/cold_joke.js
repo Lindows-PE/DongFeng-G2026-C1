@@ -1,4 +1,4 @@
-let cold = [
+var cold = [
 '蓄电池的常用单位是A·h，说明该蓄电池曾发生安时之乱',
 '荆轲刺秦怎么不算一种螺旋赶君呢',
 '精卫这首歌每个人都会反复品味，因为忘了的人会成为忘精卫的人',
@@ -12,3 +12,8 @@ let cold = [
 '为什么古代的皇上不听太监的话？因为那些都是无稽之谈',
 '什么东西是蓝色的，闻起来像红油漆？答案是蓝油漆'
 ]
+
+function getColdJoke() {
+  var send = Math.floor(Date.now()/86400000)%cold.length;
+  return cold[send];
+}
